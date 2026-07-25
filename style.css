@@ -1,0 +1,567 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+    min-height:100vh;
+    color:white;
+    background:
+    linear-gradient(
+    rgba(5,5,20,.7),
+    rgba(0,0,0,.9)
+    ),
+    url("assets/background.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    overflow-x:hidden;
+}
+
+
+
+/* STAR BACKGROUND */
+
+.stars{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background-image:
+    radial-gradient(white 1px,transparent 1px);
+
+    background-size:
+    80px 80px;
+
+    animation:
+    moveStars 80s linear infinite;
+
+    opacity:.5;
+    z-index:-1;
+}
+
+
+@keyframes moveStars{
+
+from{
+    background-position:0 0;
+}
+
+to{
+    background-position:
+    1000px 1000px;
+}
+
+}
+
+
+
+
+/* CURSOR GLOW */
+
+
+#cursor{
+
+position:fixed;
+
+width:25px;
+height:25px;
+
+border-radius:50%;
+
+background:
+rgba(255,0,80,.5);
+
+box-shadow:
+0 0 30px red;
+
+pointer-events:none;
+
+transform:
+translate(-50%,-50%);
+
+z-index:999;
+
+}
+
+
+
+/* HERO */
+
+
+header{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+}
+
+
+.hero{
+
+animation:
+fadeUp 1.5s ease;
+
+}
+
+
+
+.profile{
+
+width:170px;
+height:170px;
+
+margin:auto;
+
+border-radius:50%;
+
+padding:5px;
+
+background:
+linear-gradient(
+45deg,
+red,
+magenta,
+cyan
+);
+
+animation:
+rotate 5s linear infinite;
+
+}
+
+
+
+.profile img{
+
+width:100%;
+height:100%;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:5px solid black;
+
+}
+
+
+
+
+@keyframes rotate{
+
+100%{
+transform:rotate(360deg);
+}
+
+}
+
+
+
+h1{
+
+font-size:55px;
+
+margin-top:25px;
+
+font-weight:700;
+
+}
+
+
+
+.typing{
+
+font-size:20px;
+
+opacity:.8;
+
+}
+
+
+
+.time{
+
+margin-top:40px;
+
+}
+
+
+
+#clock{
+
+font-size:40px;
+
+}
+
+
+
+#date{
+
+opacity:.7;
+
+}
+
+
+
+
+/* CONTAINER */
+
+
+.container{
+
+width:90%;
+
+max-width:900px;
+
+margin:auto;
+
+display:grid;
+
+gap:25px;
+
+padding-bottom:50px;
+
+}
+
+
+
+
+/* GLASS CARD */
+
+
+.card{
+
+background:
+rgba(255,255,255,.08);
+
+border:
+
+1px solid rgba(255,255,255,.2);
+
+
+backdrop-filter:
+blur(15px);
+
+
+border-radius:25px;
+
+padding:30px;
+
+
+transition:
+.4s;
+
+
+animation:
+fadeUp 1s ease;
+
+
+box-shadow:
+
+0 0 30px rgba(0,0,0,.4);
+
+}
+
+
+
+.card:hover{
+
+transform:
+translateY(-10px)
+scale(1.02);
+
+
+background:
+rgba(255,255,255,.15);
+
+
+box-shadow:
+
+0 0 40px rgba(255,0,100,.5);
+
+}
+
+
+
+.card h2{
+
+margin-bottom:15px;
+
+font-size:25px;
+
+}
+
+
+
+.card p{
+
+line-height:1.8;
+
+color:#ddd;
+
+}
+
+
+
+
+/* GOAL */
+
+
+.progress{
+
+height:15px;
+
+background:#222;
+
+border-radius:20px;
+
+overflow:hidden;
+
+margin-top:20px;
+
+}
+
+
+
+.bar{
+
+height:100%;
+
+width:35%;
+
+
+background:
+
+linear-gradient(
+90deg,
+red,
+orange,
+yellow
+);
+
+
+animation:
+
+progress 2s ease;
+
+}
+
+
+
+@keyframes progress{
+
+from{
+
+width:0;
+
+}
+
+}
+
+
+
+
+/* BUTTON */
+
+
+button{
+
+margin-top:20px;
+
+padding:
+
+12px 30px;
+
+
+border:none;
+
+border-radius:30px;
+
+
+background:
+
+linear-gradient(
+45deg,
+red,
+purple
+);
+
+
+color:white;
+
+font-size:16px;
+
+cursor:pointer;
+
+
+transition:.3s;
+
+}
+
+
+
+button:hover{
+
+transform:
+scale(1.1);
+
+
+box-shadow:
+
+0 0 20px red;
+
+}
+
+
+
+
+
+/* SOCIAL */
+
+
+.social a{
+
+display:inline-block;
+
+padding:
+
+12px 30px;
+
+
+border-radius:30px;
+
+
+background:
+
+rgba(255,255,255,.1);
+
+
+border:
+1px solid white;
+
+
+color:white;
+
+
+text-decoration:none;
+
+
+transition:.3s;
+
+}
+
+
+
+.social a:hover{
+
+background:red;
+
+
+box-shadow:
+
+0 0 25px red;
+
+}
+
+
+
+
+/* FOOTER */
+
+
+footer{
+
+text-align:center;
+
+padding:40px;
+
+opacity:.7;
+
+}
+
+
+
+
+/* ANIMATION */
+
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:
+translateY(50px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:
+translateY(0);
+
+}
+
+}
+
+
+
+
+
+/* MOBILE */
+
+
+@media(max-width:600px){
+
+
+h1{
+
+font-size:40px;
+
+}
+
+
+.profile{
+
+width:140px;
+height:140px;
+
+}
+
+
+#clock{
+
+font-size:30px;
+
+}
+
+
+.card{
+
+padding:22px;
+
+}
+
+
+
+}
